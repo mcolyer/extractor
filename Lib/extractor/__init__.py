@@ -3,6 +3,9 @@ from formats.opentype import isOpenType, extractFontFromOpenType
 from formats.woff import isWOFF, extractFontFromWOFF
 
 def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions={}):
+    """
+    Converts a TrueType OpenType file to a Unified Font Object.
+    """
     if isOpenType(pathOrFile):
         func = extractFontFromOpenType
         format = "OTF"
